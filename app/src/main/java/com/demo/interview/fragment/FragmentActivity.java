@@ -118,6 +118,7 @@ public class FragmentActivity extends BaseActivity implements
 
     private void showFm(Fragment fragment) {
         //这里注意，fragmentTransaction只能commit一次，每次commit都需要重新创建
+        //通过.addToBackStack(null)添加到回退栈里面
         fragmentTransaction = fragmentManager.beginTransaction();
         if (!fragment.isAdded()) {
             fragmentTransaction.hide(mCurrentFm)

@@ -1,0 +1,17 @@
+
+一：Android 消息机制
+
+参考博客
+http://mp.weixin.qq.com/mp/homepage?__biz=Mzg2MjE0MTE2MQ==&hid=8&sn=58fbd89f1d806f2ae1ce02e57e7b33bc&scene=18#wechat_redirect
+
+1、Handler+Thread
+
+2、AsyncTask
+
+3、HandlerThread
+
+4、IntentService
+
+5、Synchronized关键字
+
+6、内存泄漏

@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:text="测试Activity启动方式"
         android:textAllCaps="false" />
+
     <Button
         android:id="@+id/btn_fragment"
         android:layout_width="wrap_content"
@@ -19,4 +20,10 @@
         android:text="测试Fragment"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_handler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试Android 消息机制"
+        android:textAllCaps="false" />
 </LinearLayout>

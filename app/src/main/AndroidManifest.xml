@@ -32,6 +32,7 @@
             android:name=".launch_activity.ActivityThree"
             android:launchMode="standard" />
         <activity android:name=".fragment.FragmentActivity"/>
+        <activity android:name=".message.HandlerActivity"/>
     </application>
 
 </manifest>
