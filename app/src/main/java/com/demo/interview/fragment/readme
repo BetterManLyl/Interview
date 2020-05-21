@@ -1,0 +1,28 @@
+
+一：介绍Fragment的使用及注意事项
+
+参考博客
+https://juejin.im/entry/5954c0145188250d932b8790
+https://www.jianshu.com/p/fd71d65f0ec6
+
+二：问题分析
+
+1、Fatal:commit already called？？
+
+每一个实例化后的 FragmentTransaction 的事物只能被提交一次，我开始时是定义了一个全局的  
+FragmentTransaction，然后就只在 onCreate() 方法中实例化了一次，但是我设置点击事件切换 
+fragment 时，会导致二次 commit，所以会报错。
+
+2、如果Activity旋转没有做任何处理，fragment会重叠
+参考博客
+https://www.jianshu.com/p/518dced1229e
+从源码角度分析，为什么会发生Fragment重叠？
+https://www.jianshu.com/p/78ec81b42f92
+使用show()，hide()带来的一个问题就是，如果你不做任何额外处理，在“内存重启”后，
+Fragment会重叠；（该BUG在support-v4 24.0.0+以上 官方已修复）
+
+三：Activity与Fragment之间互相传递数据
+参考博客
+https://www.jianshu.com/p/ab6afe1cbc5f
+
+

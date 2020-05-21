@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.View;
 
 import com.demo.interview.base.BaseActivity;
+import com.demo.interview.fragment.FragmentActivity;
 import com.demo.interview.launch_activity.ActivityOne;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
@@ -33,7 +34,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(new Intent(MainActivity.this, ActivityOne.class));
                 break;
             case R.id.btn_fragment:
-                startActivity(new Intent(MainActivity.this, ActivityOne.class));
+                startActivity(new Intent(MainActivity.this, FragmentActivity.class));
                 break;
             default:
                 break;

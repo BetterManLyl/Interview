@@ -3,6 +3,7 @@ package com.demo.interview.launch_activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.blankj.utilcode.util.LogUtils;
@@ -31,6 +32,9 @@ public class ActivityOne extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
         LogUtils.d("onCreate");
+        if (null != savedInstanceState) {
+            LogUtils.d("savedInstanceState");
+        }
         /**
          * 测试singleTop复用模式
          */
@@ -45,12 +49,12 @@ public class ActivityOne extends AppCompatActivity {
          * 如果没有设置，则会销毁该activity，重新创建。
          */
         findViewById(R.id.btn_screen).setOnClickListener(v -> {
-            if (!ScreenUtils.isLandscape()){
+            if (!ScreenUtils.isLandscape()) {
                 /**
                  * 设置横屏
                  */
                 ScreenUtils.setLandscape(ActivityOne.this);
-            }else{
+            } else {
                 /**
                  * 设置竖屏
                  */
@@ -63,11 +67,11 @@ public class ActivityOne extends AppCompatActivity {
     /**
      * 1、如果设置了android:configChanges="orientation|screenSize"
      * 屏幕旋转，生命周期不会改变，会回调onConfigurationChanged()该方法两次
-     * 
+     * <p>
      * 2、如果没有设置该参数，旋转屏幕，不会回调该方法
      * 屏幕旋转的生命周期改变过程
      * onPause()-->onStop()-->onDestroy()-->onCreate()-->onStart()-->onResume()
-     * 
+     *
      * @param newConfig
      */
     @Override
