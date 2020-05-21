@@ -18,10 +18,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        <activity android:name=".activity.ActivityOne"/>
-        <activity android:name=".activity.ActivityTwo"/>
-        <activity android:name=".activity.ActivityThree"/>
+
+        <activity
+            android:name=".launch_activity.ActivityOne"
+            android:launchMode="singleInstance"
+            android:configChanges="screenSize|orientation"
+            />
+
+        <activity
+            android:name=".launch_activity.ActivityTwo"
+            android:launchMode="standard" />
+        <activity
+            android:name=".launch_activity.ActivityThree"
+            android:launchMode="standard" />
     </application>
 
 </manifest>

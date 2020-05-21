@@ -1,0 +1,32 @@
+
+一、主要演示activity的四种启动方式
+
+1、standard 标准模式
+每次启动一个Activity就会创建一个新的实例
+
+2、singleTop 栈顶模式
+如果新Activity已经位于任务栈的栈顶，就不会重新创建，并回调 onNewIntent(intent) 方法
+
+3、singleTask 栈顶复用模式
+只要该Activity在一个任务栈中存在，都不会重新创建，并回调 onNewIntent(intent) 方法。
+如果不存在，系统会先寻找是否存在需要的栈，如果不存在该栈，就创建一个任务栈，并把该Activity
+放进去；如果存在，就会创建到已经存在的栈中
+
+4、singleInstance 单实例模式
+具有此模式的Activity只能单独位于一个任务栈中，且此任务栈中只有唯一一个实例
+
+参考博客
+https://blog.csdn.net/zhangjg_blog/article/details/10923643
+
+
+二：Activity生命周期，屏幕旋转生命周期改变
+技术点：Activity重建
+思路：一种解决思路是设置配置文件中Activity的configChanges属性
+参考回答：为了避免由于配置改变导致Activity重建，可在AndroidManifest.xml
+中对应的Activity中设置android:configChanges="orientation|screenSize"。
+此时再次旋转屏幕时，该Activity不会被系统杀死和重建，只会调用onConfigurationChanged。
+因此，当配置程序需要响应配置改变，指定configChanges属性，
+重写onConfigurationChanged方法即可。
+
+参考博客：
+https://www.jianshu.com/p/dbc7e81aead2

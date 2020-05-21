@@ -1,5 +1,8 @@
 package com.demo.interview.base;
 
+import android.os.Bundle;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
@@ -12,5 +15,20 @@ import androidx.appcompat.app.AppCompatActivity;
  * 修改时间：
  * 修改备注：
  */
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(getLayoutId());
+        initView();
+        initData();
+    }
+
+    public abstract int getLayoutId();
+
+    public abstract void initView();
+
+    public abstract void initData();
+
 }

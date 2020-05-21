@@ -1,6 +1,9 @@
-package com.demo.interview.activity;
+package com.demo.interview.launch_activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+
+import com.demo.interview.R;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,9 +18,15 @@ import androidx.appcompat.app.AppCompatActivity;
  * 修改时间：
  * 修改备注：
  */
-public class ActivityThree extends AppCompatActivity {
+public class ActivityTwo extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_two);
+        
+
+        findViewById(R.id.skip).setOnClickListener(v -> 
+                startActivity(new Intent(ActivityTwo.this, ActivityThree.class)));
+
     }
 }
