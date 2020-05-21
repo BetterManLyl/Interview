@@ -17,4 +17,10 @@
         android:layout_height="wrap_content"
         android:text="测试IntentService"
         android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="测试AsyncTask"
+        android:id="@+id/btn_async_task"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

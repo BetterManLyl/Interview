@@ -4,9 +4,23 @@
 参考博客
 http://mp.weixin.qq.com/mp/homepage?__biz=Mzg2MjE0MTE2MQ==&hid=8&sn=58fbd89f1d806f2ae1ce02e57e7b33bc&scene=18#wechat_redirect
 
+Handler 机制原理
+https://www.jianshu.com/p/b4d745c7ff7a
+
 1、Handler+Thread
+参考博客
+
 
 2、AsyncTask
+参考博客：
+https://www.jianshu.com/p/ee1342fcf5e7
+原理及其源码分析
+https://www.jianshu.com/p/37502bbbb25a
+优点:
+方便实现异步通信
+不需使用 “任务线程（如继承Thread类） + Handler”的复杂组合
+节省资源
+采用线程池的缓存线程 + 复用线程，避免了频繁创建 & 销毁线程所带来的系统资源开销
 
 3、HandlerThread
 

@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
+import android.view.View;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.demo.interview.R;
 import com.demo.interview.base.BaseActivity;
 
@@ -37,6 +39,7 @@ public class HandlerActivity extends BaseActivity {
     @Override
     public void initView() {
         textView = findViewById(R.id.tv);
+        findViewById(R.id.btn_async_task).setOnClickListener(v -> startActivity(new Intent(HandlerActivity.this, AsyncTaskActivity.class)));
     }
 
     @Override
@@ -48,13 +51,13 @@ public class HandlerActivity extends BaseActivity {
                 Thread.sleep(1000);
                 myHandler.sendEmptyMessage(22222);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                LogUtils.e("error:" + e.getMessage());
             }
         }).start();
     }
 
     /**
-     * 静态内部类并创建对Activity的弱引用
+     * 使用静态内部类并创建对Activity的弱引用
      * 防止内存泄漏
      */
     static class MyHandler extends Handler {
