@@ -1,0 +1,9 @@
+
+
+Service用法全解析
+一：参考博客
+https://www.jianshu.com/p/e04c4239b07e
+
+二：前台Service
+前台Service优先级较高，不会由于系统内存不足而被回收；
+后台Service优先级较低，当系统出现内存不足情况时，很有可能会被回收

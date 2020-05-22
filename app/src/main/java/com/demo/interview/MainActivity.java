@@ -8,6 +8,7 @@ import com.demo.interview.base.BaseActivity;
 import com.demo.interview.fragment.FragmentActivity;
 import com.demo.interview.launch_activity.ActivityOne;
 import com.demo.interview.message.HandlerActivity;
+import com.demo.interview.service.TestServiceAc;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -22,6 +23,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_activity_start_mode).setOnClickListener(this);
         findViewById(R.id.btn_fragment).setOnClickListener(this);
         findViewById(R.id.btn_handler).setOnClickListener(this);
+        findViewById(R.id.btn_service).setOnClickListener(this);
 
     }
 
@@ -41,6 +43,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn_handler:
                 startActivity(new Intent(MainActivity.this, HandlerActivity.class));
+                break;
+            case R.id.btn_service:
+                startActivity(new Intent(MainActivity.this, TestServiceAc.class));
                 break;
             default:
                 break;

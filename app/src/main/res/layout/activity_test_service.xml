@@ -4,32 +4,31 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="测试handler" />
-
-
     <Button
-        android:id="@+id/btn_intentService"
+        android:id="@+id/btn_start_service"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="测试IntentService"
+        android:text="start service"
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/btn_async_task"
+        android:id="@+id/btn_stop_service"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="测试AsyncTask"
+        android:text="stop service"
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/btn_thread_handler"
+        android:id="@+id/btn_bind_service"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="测试ThreadHandler"
+        android:text="bind service"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_unbind_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="unbind service"
+        android:textAllCaps="false" />
 </LinearLayout>

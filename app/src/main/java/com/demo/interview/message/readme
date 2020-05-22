@@ -4,12 +4,15 @@
 参考博客
 http://mp.weixin.qq.com/mp/homepage?__biz=Mzg2MjE0MTE2MQ==&hid=8&sn=58fbd89f1d806f2ae1ce02e57e7b33bc&scene=18#wechat_redirect
 
-Handler 机制原理
-https://www.jianshu.com/p/b4d745c7ff7a
+
 
 1、Handler+Thread
 参考博客
+https://www.jianshu.com/p/b4d745c7ff7a
 
+ Looper在主线程中死循环为什么没有导致界面的卡死？
+ 参考博客
+ https://www.zhihu.com/question/34652589
 
 2、AsyncTask
 参考博客：
@@ -23,6 +26,8 @@ https://www.jianshu.com/p/37502bbbb25a
 采用线程池的缓存线程 + 复用线程，避免了频繁创建 & 销毁线程所带来的系统资源开销
 
 3、HandlerThread
+参考博客
+https://www.jianshu.com/p/9c10beaa1c95
 
 4、IntentService
 

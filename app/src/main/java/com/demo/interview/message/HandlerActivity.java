@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
-import android.view.View;
 import android.widget.TextView;
 
 import com.blankj.utilcode.util.LogUtils;
@@ -40,6 +39,8 @@ public class HandlerActivity extends BaseActivity {
     public void initView() {
         textView = findViewById(R.id.tv);
         findViewById(R.id.btn_async_task).setOnClickListener(v -> startActivity(new Intent(HandlerActivity.this, AsyncTaskActivity.class)));
+        findViewById(R.id.btn_thread_handler).setOnClickListener(v -> startActivity(new Intent(HandlerActivity.this, HandlerThreadActivity.class)));
+
     }
 
     @Override
