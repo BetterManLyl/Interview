@@ -1,4 +1,4 @@
-package com.demo.interview.service;
+package com.demo.interview.four_component.service;
 
 import android.content.ComponentName;
 import android.content.Intent;

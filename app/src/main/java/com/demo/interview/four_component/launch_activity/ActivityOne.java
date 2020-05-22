@@ -1,10 +1,8 @@
-package com.demo.interview.launch_activity;
+package com.demo.interview.four_component.launch_activity;
 
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ScreenUtils;

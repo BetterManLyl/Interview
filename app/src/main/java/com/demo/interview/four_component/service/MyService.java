@@ -1,4 +1,4 @@
-package com.demo.interview.service;
+package com.demo.interview.four_component.service;
 
 import android.app.Notification;
 import android.app.PendingIntent;

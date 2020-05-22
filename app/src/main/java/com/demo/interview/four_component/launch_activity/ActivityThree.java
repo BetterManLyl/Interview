@@ -1,4 +1,4 @@
-package com.demo.interview.launch_activity;
+package com.demo.interview.four_component.launch_activity;
 
 import android.content.Intent;
 import android.os.Bundle;
