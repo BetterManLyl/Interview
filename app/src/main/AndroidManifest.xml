@@ -36,6 +36,7 @@
         <activity android:name=".message.HandlerThreadActivity" />
         <activity android:name=".four_component.service.TestServiceAc"/>
         <service android:name=".four_component.service.MyService"/>
+        <activity android:name=".animation.AnimationActivity"/>
     </application>
 
 </manifest>

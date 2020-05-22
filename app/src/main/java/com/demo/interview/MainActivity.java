@@ -3,6 +3,7 @@ package com.demo.interview;
 import android.content.Intent;
 import android.view.View;
 
+import com.demo.interview.animation.AnimationActivity;
 import com.demo.interview.base.BaseActivity;
 import com.demo.interview.fragment.FragmentActivity;
 import com.demo.interview.four_component.launch_activity.ActivityOne;
@@ -23,7 +24,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_fragment).setOnClickListener(this);
         findViewById(R.id.btn_handler).setOnClickListener(this);
         findViewById(R.id.btn_service).setOnClickListener(this);
-
+findViewById(R.id.btn_animation).setOnClickListener(this);
     }
 
     @Override
@@ -45,6 +46,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn_service:
                 startActivity(new Intent(MainActivity.this, TestServiceAc.class));
+                break;
+            case R.id.btn_animation:
+                startActivity(new Intent(MainActivity.this, AnimationActivity.class));
                 break;
             default:
                 break;

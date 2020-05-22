@@ -2,3 +2,31 @@
 
 1、参考博客
 https://www.jianshu.com/nb/36303106
+
+
+Android动画：献上一份详细 & 全面的动画知识学习攻略
+
+https://www.jianshu.com/p/53759778284a
+
+Android动画主要分为分为两大类（三种）：
+视图动画：补间动画、逐帧动画
+属性动画
+
+1、补间动画
+https://www.jianshu.com/p/733532041f46
+
+可分为四种动画
+    平移：Translate
+    缩放：scale
+    旋转：rotate
+    透明度：alpha
+不可作用于View组件的属性，如：颜色、背景等
+
+优：使用简单、方便 = 已封装好基础动画效果
+缺：仅控制整体实体效果，无法控制属性
+
+
+2、逐帧动画
+https://www.jianshu.com/p/225fe1feba60
+3、属性动画
+https://www.jianshu.com/p/2412d00a0ce4
