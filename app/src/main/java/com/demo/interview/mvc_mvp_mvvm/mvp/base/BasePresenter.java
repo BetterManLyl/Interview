@@ -23,6 +23,7 @@ public class BasePresenter<T extends IBaseView> implements IPresenter<T> {
     public void detachView() {
         mRootView = null;
     }
+
     public boolean isViewAttached() {
         return null != mRootView;
     }

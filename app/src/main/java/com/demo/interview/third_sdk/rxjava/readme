@@ -1,0 +1,76 @@
+
+
+RxJava 相关
+
+一：参考博客
+1、扔物线老师的博客
+基于RxJava 1.0
+https://gank.io/post/560e15be2dca930e00da1083
+2、RxJava 2.0
+https://www.jianshu.com/p/a406b94f3188
+
+二、操作符
+ 1、创建操作符
+    基本创建create();
+    快速创建&发送事件
+    a、just();快速创建1个被观察者对象（Observable）最多只能发送10个参数
+    b、formArray();快速创建1个被观察者对象（Observable） 直接发送 传入的数组数据
+    c、fromIterable();快速创建1个被观察者对象（Observable）直接发送 传入的集合List数据
+
+    延迟创建
+    定时操作：在经过了x秒后，需要自动执行y操作
+    周期性操作：每隔x秒后，需要自动执行y操作
+    a、defer();直到有观察者（Observer ）订阅时，才动态创建被观察者对象（Observable） & 发送事件
+    b、timer();延迟指定时间执行 本质 = 延迟指定时间后，调用一次 onNext(0)
+    c、interval();每隔指定时间 就发送 事件
+    d、intervalRange();每隔指定时间 就发送 事件，可指定发送的数据的数量
+    e、range();连续发送 1个事件序列，可指定范围 作用类似于intervalRange（），但区别在于：无延迟发送事件
+    f、rangeLong(); 同range方法，支持Long类型
+
+ 2、功能性操作符
+ 3、过滤操作符
+ 4、组合/合并操作符
+ 5、变换操作符
+
+
+    a、map();对 被观察者发送的每1个事件都通过 指定的函数 处理，从而变换成另外一种事件
+    b、FlatMap();将被观察者发送的事件序列进行 拆分 & 单独转换，再合并成一个新的事件序列，最后再进行发送
+  FlatMap讲解  https://www.jianshu.com/p/f67e05d7cd30
+
+    c、concatMap();与FlatMap（）的 区别在于：拆分 & 重新合并生成的事件序列 的顺序 = 被观察者旧序列生产的顺序
+    d、buffer();定期从 被观察者（Obervable）需要发送的事件中 获取一定数量的事件 & 放到缓存区中，最终发送
+ 6、条件/布尔操作符
+
+三：作用
+实现异步操作，类似于 Android中的 AsyncTask 、Handler作用
+
+四：Rxjava原理 基于 一种扩展的观察者模式
+RxJava原理可总结为：被观察者 （Observable） 通过 订阅（Subscribe） 按顺序发送事件
+给观察者 （Observer）， 观察者（Observer） 按顺序接收事件 & 作出对应的响应动作。
+
+五：优点
+由于 RxJava的使用方式是：基于事件流的链式调用，所以使得 RxJava：
+
+逻辑简洁
+实现优雅
+使用简单
+更重要的是，随着程序逻辑的复杂性提高，它依然能够保持简洁 & 优雅
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,6 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.demo.interview">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT"
+        tools:ignore="ProtectedPermissions" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -34,9 +43,14 @@
         <activity android:name=".message.HandlerActivity" />
         <activity android:name=".message.AsyncTaskActivity" />
         <activity android:name=".message.HandlerThreadActivity" />
-        <activity android:name=".four_component.service.TestServiceAc"/>
-        <service android:name=".four_component.service.MyService"/>
-        <activity android:name=".animation.AnimationActivity"/>
+        <activity android:name=".four_component.service.TestServiceAc" />
+
+        <service android:name=".four_component.service.MyService" />
+
+        <activity android:name=".animation.AnimationActivity" />
+        <activity android:name=".third_sdk.rxjava.RxJavaCreateActivity" />
+        <activity android:name=".third_sdk.rxjava.RxJavaActivity"/>
+        <activity android:name=".third_sdk.rxjava.RxJavaTransActivity"/>
     </application>
 
 </manifest>

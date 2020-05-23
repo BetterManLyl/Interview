@@ -9,6 +9,8 @@ import com.demo.interview.fragment.FragmentActivity;
 import com.demo.interview.four_component.launch_activity.ActivityOne;
 import com.demo.interview.message.HandlerActivity;
 import com.demo.interview.four_component.service.TestServiceAc;
+import com.demo.interview.third_sdk.rxjava.RxJavaActivity;
+import com.demo.interview.third_sdk.rxjava.RxJavaCreateActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -24,7 +26,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_fragment).setOnClickListener(this);
         findViewById(R.id.btn_handler).setOnClickListener(this);
         findViewById(R.id.btn_service).setOnClickListener(this);
-findViewById(R.id.btn_animation).setOnClickListener(this);
+        findViewById(R.id.btn_animation).setOnClickListener(this);
+        findViewById(R.id.btn_rxjava).setOnClickListener(this);
     }
 
     @Override
@@ -49,6 +52,9 @@ findViewById(R.id.btn_animation).setOnClickListener(this);
                 break;
             case R.id.btn_animation:
                 startActivity(new Intent(MainActivity.this, AnimationActivity.class));
+                break;
+            case R.id.btn_rxjava:
+                startActivity(new Intent(MainActivity.this, RxJavaActivity.class));
                 break;
             default:
                 break;

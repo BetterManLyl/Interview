@@ -16,6 +16,9 @@ public class LoginContract {
 
     public interface View extends IBaseView {
 
+        void onSuccess();
+
+        void onError();
     }
 
 

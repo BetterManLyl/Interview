@@ -37,4 +37,14 @@ public class LoginActivity extends BaseMvpActivity<LoginPresenter>
     public void initData() {
 
     }
+
+    @Override
+    public void onSuccess() {
+
+    }
+
+    @Override
+    public void onError() {
+
+    }
 }
