@@ -19,6 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:name=".App"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -54,6 +55,7 @@
         <activity android:name=".performance_optimize.PerforOptActivity"/>
         <activity android:name=".performance_optimize.MemoryOptActivity"/>
         <activity android:name=".performance_optimize.BitmapPerforOptActivity"/>
+        <activity android:name=".data_store.DataStoreActivity"/>
     </application>
 
 </manifest>

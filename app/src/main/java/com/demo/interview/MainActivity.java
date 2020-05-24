@@ -5,6 +5,7 @@ import android.view.View;
 
 import com.demo.interview.animation.AnimationActivity;
 import com.demo.interview.base.BaseActivity;
+import com.demo.interview.data_store.DataStoreActivity;
 import com.demo.interview.fragment.FragmentActivity;
 import com.demo.interview.four_component.launch_activity.ActivityOne;
 import com.demo.interview.message.HandlerActivity;
@@ -30,6 +31,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_animation).setOnClickListener(this);
         findViewById(R.id.btn_rxjava).setOnClickListener(this);
         findViewById(R.id.btn_perfor_opt).setOnClickListener(this);
+        findViewById(R.id.btn_data_store).setOnClickListener(this);
 
     }
 
@@ -61,6 +63,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn_perfor_opt:
                 startActivity(new Intent(MainActivity.this, PerforOptActivity.class));
+                break;
+            case R.id.btn_data_store:
+                startActivity(new Intent(MainActivity.this, DataStoreActivity.class));
                 break;
             default:
                 break;

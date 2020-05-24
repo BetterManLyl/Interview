@@ -1,6 +1,7 @@
 
 参考博客
 https://www.jianshu.com/nb/21401973
+https://juejin.im/post/5b50b017f265da0f7b2f649c#heading-16
 
 一、内存泄漏
 https://www.jianshu.com/p/97fb764f2669
@@ -18,3 +19,11 @@ https://www.jianshu.com/p/97fb764f2669
 
 二、bitmap图片资源使用和优化
 https://www.jianshu.com/p/7643c6aadb53
+
+优化方法
+1、内存优化
+2、布局优化
+3、绘制优化
+4、响应速度优化
+5、线程优化
+6、bitmap优化

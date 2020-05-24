@@ -1,0 +1,33 @@
+
+一、git使用教程
+https://www.liaoxuefeng.com/wiki/896043488029600
+
+二、git常用命令
+git init  //初始化git
+git add ./filename  //提交到版本库放入暂存
+git commit -m "备注" //提交到版本库
+git remote add origin http://github.com/youname/repo.git //关联远端仓库
+git remote rm origin//删除远端仓库关联
+git remote -v//查看已关联远端库
+git push -u origin master //提交到远端仓库 第一次以后用：git push origin master
+git log //查看记录
+git reset --hard HEAD^//回退版本 HEAD HEAD^  HEAD^^ HEAD~100
+cat filename//查看文件内容
+git reflog//记录每次命令查找id
+git status //查看文件状态
+git checkout -- readme.txt。//放弃工作区中的内容
+git rm filename //删除文件
+查看分支：git branch
+创建分支：git branch <name>
+切换分支：git checkout <name>
+创建+切换分支：git checkout -b <name>
+合并某分支到当前分支：git merge <name>
+删除分支：git branch -d <name>
+//直接提交所有更新
+git add -A  提交所有变化
+git add -u  提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)
+git add .  提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件
+
+git stash 可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作：
+git stash pop  恢复的同时把stash内容也删了：
+git log --graph --pretty=oneline --abbrev-commit 查看merge曲线图

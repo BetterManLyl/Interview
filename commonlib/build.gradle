@@ -55,4 +55,6 @@ dependencies {
 // 支持Gson解析
     api 'com.squareup.retrofit2:converter-gson:2.1.0'
 
+    //数据库
+    api 'org.litepal.android:java:3.0.0'
 }

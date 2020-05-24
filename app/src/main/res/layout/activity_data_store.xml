@@ -1,62 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
+
 
     <Button
-        android:id="@+id/btn_activity_start_mode"
+        android:id="@+id/btn_save_file"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="测试Activity启动方式"
-        android:textAllCaps="false" />
+        android:text="保存文件" />
+
 
     <Button
-        android:id="@+id/btn_fragment"
+        android:id="@+id/btn_save_jpeg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="测试Fragment"
-        android:textAllCaps="false" />
+        android:text="保存图片" />
+
+
+    <EditText
+        android:id="@+id/ed_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入需要保存的shared内容" />
 
     <Button
-        android:id="@+id/btn_handler"
+        android:id="@+id/btn_write_shared"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="测试Android 消息机制"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn_service"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="测试Service"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/btn_animation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="动画"
+        android:text="保存shared"
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/btn_rxjava"
+        android:id="@+id/btn_read_shared"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="测试RxJava"
+        android:text="读取shared"
         android:textAllCaps="false" />
+
     <Button
-        android:id="@+id/btn_perfor_opt"
+        android:id="@+id/btn_sqlite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="性能优化"
+        android:text="SQLite"
         android:textAllCaps="false" />
+
     <Button
-        android:id="@+id/btn_data_store"
+        android:id="@+id/btn_litePal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="数据存储"
+        android:text="测试litePal"
         android:textAllCaps="false" />
+
 </LinearLayout>
