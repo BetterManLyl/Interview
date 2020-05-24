@@ -9,6 +9,7 @@ import com.demo.interview.fragment.FragmentActivity;
 import com.demo.interview.four_component.launch_activity.ActivityOne;
 import com.demo.interview.message.HandlerActivity;
 import com.demo.interview.four_component.service.TestServiceAc;
+import com.demo.interview.performance_optimize.PerforOptActivity;
 import com.demo.interview.third_sdk.rxjava.RxJavaActivity;
 import com.demo.interview.third_sdk.rxjava.RxJavaCreateActivity;
 
@@ -28,6 +29,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_service).setOnClickListener(this);
         findViewById(R.id.btn_animation).setOnClickListener(this);
         findViewById(R.id.btn_rxjava).setOnClickListener(this);
+        findViewById(R.id.btn_perfor_opt).setOnClickListener(this);
+
     }
 
     @Override
@@ -55,6 +58,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn_rxjava:
                 startActivity(new Intent(MainActivity.this, RxJavaActivity.class));
+                break;
+            case R.id.btn_perfor_opt:
+                startActivity(new Intent(MainActivity.this, PerforOptActivity.class));
                 break;
             default:
                 break;

@@ -51,6 +51,9 @@
         <activity android:name=".third_sdk.rxjava.RxJavaCreateActivity" />
         <activity android:name=".third_sdk.rxjava.RxJavaActivity"/>
         <activity android:name=".third_sdk.rxjava.RxJavaTransActivity"/>
+        <activity android:name=".performance_optimize.PerforOptActivity"/>
+        <activity android:name=".performance_optimize.MemoryOptActivity"/>
+        <activity android:name=".performance_optimize.BitmapPerforOptActivity"/>
     </application>
 
 </manifest>
