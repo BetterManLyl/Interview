@@ -95,6 +95,8 @@ public class AsyncTaskActivity extends BaseActivity {
                     }
                 };
                 asyncTask.execute("你好");
+                //第二次调用崩溃
+//                asyncTask.execute("你好");
             }
         });
     }
