@@ -169,11 +169,13 @@ public class RxJavaCreateActivity extends BaseActivity implements View.OnClickLi
                 // b. 作用：定义需要发送的事件 & 向观察者发送事件
                 emitter.onNext(1);
                 emitter.onNext(2);
+                Thread.sleep(1000);
                 emitter.onNext(3);
                 emitter.onNext(4);
                 emitter.onComplete();
             }
         });
+
 
         /**
          * 2、创建观察者 （Observer ）并 定义响应事件的行为
@@ -321,31 +323,32 @@ public class RxJavaCreateActivity extends BaseActivity implements View.OnClickLi
         String[] strings = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
         // 2. 创建被观察者对象（Observable）时传入数组
         // 在创建后就会将该数组转换成Observable & 发送该对象中的所有数据
-        Observable.fromArray(strings).subscribe(new Observer<String>() {
-            @Override
-            public void onSubscribe(Disposable d) {
+        Observable.fromArray(strings)
+                .subscribe(new Observer<String>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
 
-            }
+                    }
 
-            @Override
-            public void onNext(String s) {
-                LogUtils.d("onNext:" + s);
-            }
+                    @Override
+                    public void onNext(String s) {
+                        LogUtils.d("onNext:" + s);
+                    }
 
-            @Override
-            public void onError(Throwable e) {
+                    @Override
+                    public void onError(Throwable e) {
 
-            }
+                    }
 
-            @Override
-            public void onComplete() {
-                LogUtils.d("onComplete");
-            }
-        });
+                    @Override
+                    public void onComplete() {
+                        LogUtils.d("onComplete");
+                    }
+                });
     }
 
     /**
-     *将集合中的每一个数据发送出去
+     * 将集合中的每一个数据发送出去
      */
     private void fromIterable() {
         // 1. 设置一个集合
@@ -356,6 +359,7 @@ public class RxJavaCreateActivity extends BaseActivity implements View.OnClickLi
                 }
             }
         };
+
         //2、通过fromIterable()将集合中的对象 / 数据发送出去
         Observable.fromIterable(list).subscribe(new Observer<String>() {
             @Override

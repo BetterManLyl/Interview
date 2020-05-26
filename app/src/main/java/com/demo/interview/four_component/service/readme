@@ -12,6 +12,7 @@ https://www.jianshu.com/p/e04c4239b07e
 Android 进程不死从3个层面入手：
 
 A.提供进程优先级，降低进程被杀死的概率
+参考博客 https://www.jianshu.com/p/63aafe3c12af
 方法一：监控手机锁屏解锁事件，在屏幕锁屏时启动1个像素的 Activity，在用户解锁时将 Activity 销毁掉。
 方法二：启动前台service。
 方法三：提升service优先级：

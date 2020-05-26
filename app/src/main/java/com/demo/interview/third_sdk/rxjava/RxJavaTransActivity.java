@@ -1,6 +1,6 @@
 package com.demo.interview.third_sdk.rxjava;
 
-import android.util.Log;
+import android.annotation.SuppressLint;
 import android.view.View;
 
 import com.blankj.utilcode.util.LogUtils;
@@ -10,13 +10,12 @@ import com.demo.interview.base.BaseActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.reactivex.Flowable;
 import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 
 /**
@@ -57,6 +56,7 @@ public class RxJavaTransActivity extends BaseActivity implements View.OnClickLis
                 break;
             case R.id.btn_flatMap:
                 flatMap();
+                test();
                 break;
             case R.id.btn_concatMap:
                 concatMap();
@@ -70,6 +70,14 @@ public class RxJavaTransActivity extends BaseActivity implements View.OnClickLis
     }
 
     private void buffer() {
+        Observable.fromArray("1").flatMap(new Function<String, ObservableSource<?>>() {
+            @Override
+            public ObservableSource<Integer> apply(String s) throws Exception {
+                return Observable.fromIterable(new ArrayList<>());
+            }
+        }).subscribe();
+
+
         // 被观察者 需要发送5个数字
         Observable.just(1, 2, 3, 4, 5)
                 .buffer(3, 1) // 设置缓存区大小 & 步长
@@ -83,7 +91,7 @@ public class RxJavaTransActivity extends BaseActivity implements View.OnClickLis
 
                     @Override
                     public void onNext(List<Integer> stringList) {
-                        LogUtils.d(" 缓存区里的事件数量 = " +  stringList.size());
+                        LogUtils.d(" 缓存区里的事件数量 = " + stringList.size());
                         for (Integer value : stringList) {
                             LogUtils.d("事件：" + value);
                         }
@@ -235,5 +243,33 @@ public class RxJavaTransActivity extends BaseActivity implements View.OnClickLis
                     }
                 });
 
+    }
+
+    @SuppressLint("CheckResult")
+    private void test() {
+
+        ArrayList<Student.Source> sources = new ArrayList<Student.Source>() {
+            {
+                add(new Student.Source("语文", "1"));
+                add(new Student.Source("数学", "2"));
+                add(new Student.Source("英语", "3"));
+            }
+        };
+
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(new Student("lyl", "男", sources));
+        students.add(new Student("cml", "男", sources));
+        Observable.fromIterable(students)
+                .flatMap(new Function<Student, ObservableSource<Student.Source>>() {
+            @Override
+            public ObservableSource<Student.Source> apply(Student student) throws Exception {
+                return Observable.fromIterable(student.getList());
+            }
+        }).subscribe(new Consumer<Student.Source>() {
+            @Override
+            public void accept(Student.Source source) throws Exception {
+                LogUtils.d("accept:" + source.getSourceName());
+            }
+        });
     }
 }

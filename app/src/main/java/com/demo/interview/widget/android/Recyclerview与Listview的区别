@@ -1,0 +1,28 @@
+参考博客
+
+https://www.jianshu.com/p/f592f3715ae2
+
+•RecyclerView 和 ListView 布局效果的对比
+•RecyclerView 和 ListView 一些常用的功能 和 API 的对比
+•RecyclerView 和 ListView 在 Android L 引入嵌套滚动机制之后的对比
+
+1、Android 默认提供的 RecyclerView 就能支持 线性布局、网格布局、瀑布流布局 三种
+ LinearLayoutManager（线性布局效果）
+ GridLayoutManager（网格布局效果）
+ StaggeredGridLayoutManager（瀑布流布局效果）
+
+ViewHolder 的编写规范化了
+RecyclerView 复用 Item 的工作 Google 全帮你搞定，不再需要像 ListView 那样自己调用 setTag
+RecyclerView 需要多出一步 LayoutManager 的设置工作
+
+RecyclerView性能优化
+https://zhuanlan.zhihu.com/p/49338922
+
+1、数据处理与视图绑定分离
+a、RecyclerView的bindViewHolder方法是在UI线程进行的，如果在该方法进行耗时操作，
+将会影响滑动的流畅性。
+2、数据优化
+a、分页加载远端数据，对拉取的远端数据进行缓存，提高二次加载速度；
+b、对于新增或删除数据通过DiffUtil，来进行局部数据刷新，而不是一味的全局刷新数据
+3、布局优化
+a、减少布局层级，可以考虑使用自定义View来减少层级，或者更合理的设置布局来减少层级。
