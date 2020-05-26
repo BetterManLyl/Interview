@@ -1,4 +1,4 @@
-package com.demo.interview.design_mode;
+package com.demo.interview.design_mode.singleton;
 
 /**
  * 文 件 名：SingleInstance
@@ -34,5 +34,9 @@ public class SingleInstance_3 {
     // 延迟加载、按需创建
     public static SingleInstance_3 getInstance() {
         return SingleInstance_4.singleInstance_3;
+    }
+
+    public void test(){
+        System.out.println("test SingleInstance_3");
     }
 }

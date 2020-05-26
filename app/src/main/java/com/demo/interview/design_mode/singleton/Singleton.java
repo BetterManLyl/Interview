@@ -1,4 +1,4 @@
-package com.demo.interview.design_mode;
+package com.demo.interview.design_mode.singleton;
 
 /**
  * 文 件 名：Singleton
