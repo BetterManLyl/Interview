@@ -21,7 +21,7 @@ public class BlcokQueueT {
 
         LinkedBlockingQueue<Integer> linkedBlockingQueue = new LinkedBlockingQueue<>();
         for (int i = 0; i < 10; i++) {
-            //如果队列满了，则崩溃
+            //如果队列满了，则抛出异常
 //            queue.add(i);
             //向队列中插入元素，插入成功返回true；插入失败返回false
             queue.offer(i);
@@ -37,14 +37,14 @@ public class BlcokQueueT {
     }
 
     private void startThread() {
-        new MyThread_1().start();
+        new MyThread_1("MyThread_1").start();
 
-        new MyThread_2().start();
+        new MyThread_2("MyThread_2").start();
         new MyThread().start();
     }
 
 
-    private ArrayBlockingQueue<String> arrayBlockingQueue = new ArrayBlockingQueue<>(10);
+    private LinkedBlockingQueue<String> arrayBlockingQueue = new LinkedBlockingQueue<>();
 
     private void addData(String value) {
         System.out.println("添加数据" + value);
@@ -58,7 +58,7 @@ public class BlcokQueueT {
             for (int i = 0; i < 10; i++) {
                 addData("第" + i + "个");
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(50);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -67,12 +67,19 @@ public class BlcokQueueT {
     }
 
     class MyThread_1 extends Thread {
+
+        public MyThread_1(String name) {
+            super(name);
+        }
+
         @Override
         public void run() {
             super.run();
             while (true) {
                 try {
-                    System.out.println("取数据" + arrayBlockingQueue.take());
+                    Thread.sleep(50);
+                    System.out.println("取数据 -->" + Thread.currentThread().getName()
+                            + " -->" + arrayBlockingQueue.take());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -81,12 +88,18 @@ public class BlcokQueueT {
     }
 
     class MyThread_2 extends Thread {
+        public MyThread_2(String name) {
+            super(name);
+        }
+
         @Override
         public void run() {
             super.run();
             while (true) {
                 try {
-                    System.out.println("取数据" + arrayBlockingQueue.take());
+                    Thread.sleep(50);
+                    System.out.println("取数据 -->" + Thread.currentThread().getName()
+                            + " -->" + arrayBlockingQueue.take());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
