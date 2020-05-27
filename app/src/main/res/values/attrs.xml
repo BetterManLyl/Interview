@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--自定义View 自定义属性-->
+<resources>
+
+    <!--format的意思是该属性的取值是什么类型（支持的类型有string,color,demension,
+    integer,enum,reference,float,boolean,fraction,flag）-->
+    <attr name="mText" format="string" />
+    <attr name="mSize" format="dimension" />
+    <attr name="mTextColor" format="color" />
+    
+    
+    
+    <declare-styleable name="MyCustomView">
+        <attr name="mText" />
+        <attr name="mSize" />
+        <attr name="mTextColor" />
+    </declare-styleable>
+    
+    
+    
+
+</resources>

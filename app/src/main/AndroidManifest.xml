@@ -8,18 +8,19 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT"
+    <uses-permission
+        android:name="android.permission.CAPTURE_AUDIO_OUTPUT"
         tools:ignore="ProtectedPermissions" />
 
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name=".App"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -50,12 +51,13 @@
 
         <activity android:name=".animation.AnimationActivity" />
         <activity android:name=".third_sdk.rxjava.RxJavaCreateActivity" />
-        <activity android:name=".third_sdk.rxjava.RxJavaActivity"/>
-        <activity android:name=".third_sdk.rxjava.RxJavaTransActivity"/>
-        <activity android:name=".performance_optimize.PerforOptActivity"/>
-        <activity android:name=".performance_optimize.MemoryOptActivity"/>
-        <activity android:name=".performance_optimize.BitmapPerforOptActivity"/>
-        <activity android:name=".data_store.DataStoreActivity"/>
+        <activity android:name=".third_sdk.rxjava.RxJavaActivity" />
+        <activity android:name=".third_sdk.rxjava.RxJavaTransActivity" />
+        <activity android:name=".performance_optimize.PerforOptActivity" />
+        <activity android:name=".performance_optimize.MemoryOptActivity" />
+        <activity android:name=".performance_optimize.BitmapPerforOptActivity" />
+        <activity android:name=".data_store.DataStoreActivity" />
+        <activity android:name=".widget.custom.MyCustomViewActivity" />
     </application>
 
 </manifest>

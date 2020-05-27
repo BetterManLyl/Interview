@@ -16,6 +16,7 @@ import com.demo.interview.four_component.service.TestServiceAc;
 import com.demo.interview.performance_optimize.PerforOptActivity;
 import com.demo.interview.third_sdk.rxjava.RxJavaActivity;
 import com.demo.interview.third_sdk.rxjava.RxJavaCreateActivity;
+import com.demo.interview.widget.custom.MyCustomViewActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -35,7 +36,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_rxjava).setOnClickListener(this);
         findViewById(R.id.btn_perfor_opt).setOnClickListener(this);
         findViewById(R.id.btn_data_store).setOnClickListener(this);
-
+findViewById(R.id.btn_custom_view).setOnClickListener(this);
     }
 
     @Override
@@ -69,6 +70,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btn_data_store:
                 startActivity(new Intent(MainActivity.this, DataStoreActivity.class));
+                break;
+            case R.id.btn_custom_view:
+                startActivity(new Intent(MainActivity.this, MyCustomViewActivity.class));
                 break;
             default:
                 break;

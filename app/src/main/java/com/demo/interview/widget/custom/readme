@@ -1,0 +1,71 @@
+
+
+一、Android 自定义View相关
+https://blog.csdn.net/u010163442/category_6236549.html
+1、Android自定义View深度解析（一、初体验自定义TextView）
+https://blog.csdn.net/xmxkf/article/details/51454685
+2、Android自定义View深度解析（二、深入解析自定义属性）
+https://blog.csdn.net/xmxkf/article/details/51468648
+
+二、问题分析
+1、invalidate()和postInvalidate() 的区别及使用
+https://blog.csdn.net/Mars2639/article/details/6650876
+
+2、invalidate、postInvalidate与requestLayout浅析
+https://juejin.im/post/5d53ddd6f265da03d15549b8
+
+先说三个方法的区别：
+invalidate只会调onDraw方法且必须在UI线程中调用
+postInvalidate只会调onDraw方法，可以再UI线程中回调
+requestLayout会调onMeasure、onLayout和onDraw(特定条件下)方法
+
+
+三、Android的事件分发机制
+
+1、Android事件分发机制完全解析，带你从源码的角度彻底理解(上) 郭霖
+https://blog.csdn.net/guolin_blog/article/details/9097463
+2、Android中的dispatchTouchEvent()、onInterceptTouchEvent()和onTouchEvent()
+https://blog.csdn.net/xyz_lmn/article/details/12517911
+
+方法调用
+1、View里，有两个回调函数 ：
+    public boolean dispatchTouchEvent(MotionEvent ev)；  
+    public boolean onTouchEvent(MotionEvent ev); 
+2、ViewGroup里，有三个回调函数 ：
+    public boolean dispatchTouchEvent(MotionEvent ev)；  
+    public boolean onInterceptTouchEvent(MotionEvent ev);  
+    public boolean onTouchEvent(MotionEvent ev);
+3、在Activity里，有两个回调函数 ：
+    public boolean dispatchTouchEvent(MotionEvent ev)；  
+    public boolean onTouchEvent(MotionEvent ev); 
+   
+4、Android中默认情况下事件传递是由最终的view的接收到，过程是
+            Activity--->ViewGroup--->View
+
+a、全部返回super方法时，事件分发流程
+开始-->
+dispatchTouchEvent(AC)-->dispatchTouchEvent(VG)-->onInterceptTouchEvent(VG)
+-->dispatchTouchEvent(V)-->onTouchEvent(V)-->onTouchEvent(VG)-->onTouchEvent(AC)
+-->结束
+
+b、AC的dispatchTouchEvent();返回false或者true
+  开始-->
+  dispatchTouchEvent(AC)
+  -->结束
+  
+c、
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
