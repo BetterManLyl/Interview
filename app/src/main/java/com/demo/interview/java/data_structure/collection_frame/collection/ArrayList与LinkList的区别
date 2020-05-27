@@ -1,0 +1,9 @@
+
+
+https://blog.csdn.net/TTTZZZTTTZZZ/article/details/84916281
+
+
+ArrayList和LinkedList的大致区别如下:
+ArrayList是实现了基于动态数组的数据结构，LinkedList是基于链表结构。
+对于随机访问的get和set方法，ArrayList要优于LinkedList，因为LinkedList要移动指针。
+对于新增和删除操作add和remove，LinkedList比较占优势，因为ArrayList要移动数据
