@@ -58,6 +58,9 @@
         <activity android:name=".performance_optimize.BitmapPerforOptActivity" />
         <activity android:name=".data_store.DataStoreActivity" />
         <activity android:name=".widget.custom.MyCustomViewActivity" />
+        <activity android:name=".network.socket.TCPClientActivity" />
+
+        <service android:name=".network.socket.TcpServerService" />
     </application>
 
 </manifest>

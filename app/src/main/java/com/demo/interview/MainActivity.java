@@ -13,6 +13,7 @@ import com.demo.interview.four_component.launch_activity.ActivityOne;
 import com.demo.interview.java.oop.People;
 import com.demo.interview.message.HandlerActivity;
 import com.demo.interview.four_component.service.TestServiceAc;
+import com.demo.interview.network.socket.TCPClientActivity;
 import com.demo.interview.performance_optimize.PerforOptActivity;
 import com.demo.interview.third_sdk.rxjava.RxJavaActivity;
 import com.demo.interview.third_sdk.rxjava.RxJavaCreateActivity;
@@ -36,7 +37,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_rxjava).setOnClickListener(this);
         findViewById(R.id.btn_perfor_opt).setOnClickListener(this);
         findViewById(R.id.btn_data_store).setOnClickListener(this);
-findViewById(R.id.btn_custom_view).setOnClickListener(this);
+        findViewById(R.id.btn_custom_view).setOnClickListener(this);
+        findViewById(R.id.btn_socket).setOnClickListener(this);
     }
 
     @Override
@@ -73,6 +75,9 @@ findViewById(R.id.btn_custom_view).setOnClickListener(this);
                 break;
             case R.id.btn_custom_view:
                 startActivity(new Intent(MainActivity.this, MyCustomViewActivity.class));
+                break;
+            case R.id.btn_socket:
+                startActivity(new Intent(MainActivity.this, TCPClientActivity.class));
                 break;
             default:
                 break;

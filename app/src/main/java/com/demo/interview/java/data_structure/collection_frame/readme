@@ -1,0 +1,63 @@
+
+1、集合框架相关参考博客
+
+https://www.jianshu.com/p/63e76826e852
+
+常用集合类简介及线程安全和非线程安全的集合对象
+https://www.cnblogs.com/huangdabing/p/9249233.html
+
+一、概述
+二、Collection接口
+   1.List
+   2.Set
+   3.Queue
+三、Map接口
+   1.HashMap实现原理
+   2.其它Map实现类
+四、其它集合类
+五、总结
+
+
+线程安全
+1、Vector
+2、HashTable
+3、StringBuffer
+
+线程不安全
+1、ArrayList
+2、LinkedList
+3、HashMap
+4、HashSet
+5、TreeMap
+6、TreeSet
+7、StringBuilder
+
+
+到这里，对于Java集合框架的总结就结束了，还有很多集合类没有在这里提到，更多的还是需要大家自己
+去查去用。通过阅读源码，查阅资料，收获很大。
+Java集合框架主要包括Collection和Map两种类型。其中Collection又有3种子类型，
+分别是List、Set、Queue。Map中存储的主要是键值对映射。
+规则集Set中存储的是不重复的元素，线性表中存储可以包括重复的元素，
+Queue队列描述的是先进先出的数据结构，可以用LinkedList来实现队列。
+效率上，规则集比线性表更高效。
+ArrayList主要是用数组来存储元素，LinkedList主要是用链表来存储元素，
+HashMap的底层实现主要是借助数组+链表+红黑树来实现。
+Vector、Hashtable等集合类效率比较低但都是线程安全的。
+包java.util.concurrent下包含了大量线程安全的集合类，效率上有较大提升。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

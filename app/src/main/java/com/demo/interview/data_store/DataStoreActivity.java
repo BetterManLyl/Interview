@@ -73,8 +73,6 @@ public class DataStoreActivity extends BaseActivity implements View.OnClickListe
                 });
 
         SQLFunction.initTable(this);
-        SQLiteDatabase db = LitePal.getDatabase();
-
     }
 
     @Override

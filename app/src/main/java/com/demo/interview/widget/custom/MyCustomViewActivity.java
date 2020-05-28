@@ -1,5 +1,6 @@
 package com.demo.interview.widget.custom;
 
+import android.annotation.SuppressLint;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -26,6 +27,7 @@ public class MyCustomViewActivity extends BaseActivity {
         return R.layout.activity_custom_view;
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public void initView() {
         myCustomView = findViewById(R.id.custom_view);

@@ -40,13 +40,9 @@ public class DBHelper extends SQLiteOpenHelper {
                 " name VARCHAR,info TEXT)");
     }
 
+    //实现数据库升级等操作
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
 
-    }
-
-    @Override
-    public void onOpen(SQLiteDatabase sqLiteDatabase) {
-        super.onOpen(sqLiteDatabase);
     }
 }

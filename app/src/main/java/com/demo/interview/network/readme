@@ -3,3 +3,42 @@
 1、网络编程
 参考博客
 https://www.jianshu.com/nb/21655828
+
+WebSocket 和socket 的区别
+https://www.cnblogs.com/zyy1688/p/10002089.html
+1、Socket 和 WebSocket 有哪些区别和联系？
+2、WebSocket 和 HTML5 是什么关系？
+3、必须在浏览器中才能使用 WebSocket 吗？
+4、WebSocket 能和 Socket 一样传输 raw 数据么？
+5、WebSocket 和 Socket 相比会多耗费流量么？
+
+
+  1、WebSocket与HTTP的关系
+相同点
+1. 都是一样基于TCP的，都是可靠性传输协议。
+2. 都是应用层协议。
+不同点
+1. WebSocket是双向通信协议，模拟Socket协议，可以双向发送或接受信息。HTTP是单向的。
+2. WebSocket是需要握手进行建立连接的。
+ 联系
+WebSocket在建立握手时，数据是通过HTTP传输的。但是建立之后，在真正传输时候是
+不需要HTTP协议的。
+
+2、WebSocket与Socket的关系
+Socket其实并不是一个协议，而是为了方便使用TCP或UDP而抽象出来的一层，是位于应用层和传输控制
+层之间的一组接口。Socket是应用层与TCP/IP协议族通信的中间软件抽象层，它是一组接口。
+在设计模式中，Socket其实就是一个门面模式，它把复杂的TCP/IP协议族隐藏在Socket接口后面，
+对用户来说，一组简单的接口就是全部，让Socket去组织数据，以符合指定的协议。当两台主机通信时，
+必须通过Socket连接，Socket则利用TCP/IP协议建立TCP连接。TCP连接则更依靠于底层的IP协议，
+IP协议的连接则依赖于链路层等更低层次。WebSocket则是一个典型的应用层协议。
+区别
+Socket是传输控制层协议，WebSocket是应用层协议。
+
+3、HTML5与WebSocket的关系
+WebSocket API 是 HTML5 标准的一部分， 但这并不代表 WebSocket 一定要用在 HTML 中，
+或者只能在基于浏览器的应用程序中使用。
+
+
+
+
+

@@ -47,12 +47,14 @@
         android:layout_height="wrap_content"
         android:text="测试RxJava"
         android:textAllCaps="false" />
+
     <Button
         android:id="@+id/btn_perfor_opt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="性能优化"
         android:textAllCaps="false" />
+
     <Button
         android:id="@+id/btn_data_store"
         android:layout_width="wrap_content"
@@ -65,5 +67,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="自定义View"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_socket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="socket"
         android:textAllCaps="false" />
 </LinearLayout>

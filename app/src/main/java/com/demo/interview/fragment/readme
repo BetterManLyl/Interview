@@ -24,5 +24,6 @@ Fragment会重叠；（该BUG在support-v4 24.0.0+以上 官方已修复）
 三：Activity与Fragment之间互相传递数据
 参考博客
 https://www.jianshu.com/p/ab6afe1cbc5f
+https://www.jianshu.com/p/d1c5f2c8dd6f
 
 
