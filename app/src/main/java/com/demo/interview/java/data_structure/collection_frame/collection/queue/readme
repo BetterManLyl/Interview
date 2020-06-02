@@ -11,7 +11,7 @@ https://www.jianshu.com/p/8503349b27f4
 可用。 阻塞队列常用于生产者和消费者的场景， 生产者是往队列里添加元素的线程， 消费者
 是从队列里拿元素的线程。 阻塞队列就是生产者存放元素的容器， 而消费者也只从容器里拿
 元素
-ArrayBlockingQueue ： 一个由数组结构组成的有界阻塞队列。
+ ArrayBlockingQueue ： 一个由数组结构组成的有界阻塞队列。
  LinkedBlockingQueue ： 一个由链表结构组成的有界阻塞队列。
  PriorityBlockingQueue ： 一个支持优先级排序的无界阻塞队列。
  DelayQueue： 一个使用优先级队列实现的无界阻塞队列。

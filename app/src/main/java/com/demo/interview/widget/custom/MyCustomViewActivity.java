@@ -3,6 +3,7 @@ package com.demo.interview.widget.custom;
 import android.annotation.SuppressLint;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.demo.interview.R;
@@ -21,6 +22,7 @@ import com.demo.interview.base.BaseActivity;
 public class MyCustomViewActivity extends BaseActivity {
 
     private MyCustomView myCustomView;
+    private Button btn_modify;
 
     @Override
     public int getLayoutId() {
@@ -31,12 +33,12 @@ public class MyCustomViewActivity extends BaseActivity {
     @Override
     public void initView() {
         myCustomView = findViewById(R.id.custom_view);
-        
-        findViewById(R.id.btn_modify).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                myCustomView.setTxt("hello java");
-            }
+        btn_modify=findViewById(R.id.btn_modify);
+        btn_modify.setOnClickListener(v -> myCustomView.setTxt("hello java"));
+
+        btn_modify.setOnTouchListener((v, event) -> {
+            LogUtils.d("onTouch");
+            return false;
         });
         myCustomView.setOnTouchListener(new View.OnTouchListener() {
             @Override

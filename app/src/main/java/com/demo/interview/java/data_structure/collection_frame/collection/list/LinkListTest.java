@@ -21,5 +21,11 @@ public class LinkListTest {
             linkedList.add("第" + i + "个");
         }
         linkedList.addFirst("a");
+        linkedList.addLast("b");
+        linkedList.getFirst();
+        linkedList.getLast();
+        linkedList.set(0,"测试修改");
+        linkedList.removeFirst();
+        linkedList.removeLast();
     }
 }

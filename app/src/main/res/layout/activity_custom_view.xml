@@ -22,13 +22,13 @@
             app:mSize="50sp"
             app:mText="你叫什么名字"
             app:mTextColor="#333" />
-
+        <Button
+            android:id="@+id/btn_modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="modify"
+            android:textAllCaps="false" />
     </com.demo.interview.widget.custom.MyViewGroup>
 
-    <Button
-        android:id="@+id/btn_modify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="modify"
-        android:textAllCaps="false" />
+
 </LinearLayout>
