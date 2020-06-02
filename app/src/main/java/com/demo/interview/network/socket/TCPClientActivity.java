@@ -86,6 +86,7 @@ public class TCPClientActivity extends BaseActivity {
         findViewById(R.id.btn_close).setOnClickListener(v -> {
             if (null != mClientSocket) {
                 try {
+
                     mClientSocket.close();
                     mClientSocket.shutdownInput();
                 } catch (IOException e) {

@@ -1,22 +1,18 @@
 package com.demo.interview;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import com.demo.interview.animation.AnimationActivity;
 import com.demo.interview.base.BaseActivity;
 import com.demo.interview.data_store.DataStoreActivity;
-import com.demo.interview.fragment.FragmentActivity;
 import com.demo.interview.four_component.launch_activity.ActivityOne;
-import com.demo.interview.java.oop.People;
-import com.demo.interview.message.HandlerActivity;
 import com.demo.interview.four_component.service.TestServiceAc;
+import com.demo.interview.fragment.FragmentActivity;
+import com.demo.interview.message.HandlerActivity;
 import com.demo.interview.network.socket.TCPClientActivity;
 import com.demo.interview.performance_optimize.PerforOptActivity;
 import com.demo.interview.third_sdk.rxjava.RxJavaActivity;
-import com.demo.interview.third_sdk.rxjava.RxJavaCreateActivity;
 import com.demo.interview.widget.custom.MyCustomViewActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
