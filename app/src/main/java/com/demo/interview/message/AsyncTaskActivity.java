@@ -57,12 +57,18 @@ public class AsyncTaskActivity extends BaseActivity {
                  * 注：AsyncTask子类的实例必须在UI线程中创建
                  */
                 asyncTask=  new AsyncTask<String, Integer, String>() {
+                    // 方法1：onPreExecute（）
+                    // 作用：执行 线程任务前的操作
+                    // 注：根据需求复写
                     @Override
                     protected void onPreExecute() {
                         super.onPreExecute();
                         LogUtils.d("onPreExecute");
                     }
 
+                    // 方法2：doInBackground（）
+                    // 作用：接收输入参数、执行任务中的耗时操作、返回 线程任务执行的结果
+                    // 注：必须复写，从而自定义线程任务
                     @Override
                     protected String doInBackground(String... strings) {
                         int count = 99;
@@ -81,12 +87,18 @@ public class AsyncTaskActivity extends BaseActivity {
                     }
 
 
+                    // 方法3：onPostExecute（）
+                    // 作用：接收线程任务执行结果、将执行结果显示到UI组件
+                    // 注：必须复写，从而自定义UI操作
                     @Override
                     protected void onPostExecute(String s) {
                         super.onPostExecute(s);
                         LogUtils.d("result:" + s);
                     }
 
+                    // 方法4：onProgressUpdate（）
+                    // 作用：在主线程 显示线程任务执行的进度
+                    // 注：根据需求复写
                     @Override
                     protected void onProgressUpdate(Integer... values) {
                         super.onProgressUpdate(values);
