@@ -1,16 +1,8 @@
 package com.demo.interview.thread;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
 
 /**
  * 文 件 名：MyThread
@@ -36,16 +28,21 @@ public class MyThread extends Thread {
     @Override
     public void run() {
         super.run();
-        while (!this.isInterrupted()) {
-            i++;
-            System.out.println("运行中:" + i);
+        try {
+            this.wait(5000);
+            System.out.println("wait");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+//        while (!this.isInterrupted()) {
+//            i++;
+//            System.out.println("运行中:" + i);
+//        }
     }
 
     public static void main(String[] args) {
         MyThread myThread = new MyThread();
         myThread.start();
-
 //        myThread.setName("MyThread");
 //        myThread.setPriority(1);
         try {

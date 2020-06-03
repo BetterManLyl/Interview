@@ -213,7 +213,6 @@ public class DataStoreActivity extends BaseActivity implements View.OnClickListe
         Student student2 = new Student();
         student2.setName("lyl1111");
         student2.setSex("男");
-
         student2.save();
     }
 }

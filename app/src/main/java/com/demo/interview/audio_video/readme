@@ -3,3 +3,10 @@
 参考博客
 https://blog.51cto.com/ticktick/category15.html
 https://www.jianshu.com/c/404039678493
+
+
+1、MediaCodec使用介绍
+https://www.jianshu.com/p/f5a1c9318524
+
+2、MediaCodec和MediaMuxer编解码并进行音视频合并 demo
+https://github.com/zhongjihao/AVMediaCodecMP4

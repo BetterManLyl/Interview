@@ -1,6 +1,4 @@
-package com.demo.interview.arithmetic;
-
-import io.reactivex.internal.observers.BlockingFirstObserver;
+package com.demo.interview.java.arithmetic;
 
 /**
  * 文 件 名：Arithmetic
@@ -35,15 +33,16 @@ public class Arithmetic {
                     System.out.println("arr:" + arr[k]);
                 }
             }
-            
+
         }
     }
 
     /**
      * 选择排序
+     *
      * @param numbers
      */
-    public  void selectSort(int[] numbers) {
+    public void selectSort(int[] numbers) {
         int size = numbers.length; // 数组长度
         int temp = 0; // 中间变量
         for (int i = 0; i < size - 1; i++) {
@@ -67,6 +66,18 @@ public class Arithmetic {
 //        arithmetic.selectSort(array);
         for (int i = 0; i < array.length; i++) {
             System.out.println("bubble:" + array[i]);
+        }
+    }
+
+    void test(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = array.length - 1; j > i; j--) {
+                if (array[j] < array[j - 1]) {
+                    int temp = array[j];
+                    array[j] = array[j - 1];
+                    array[j - 1] = temp;
+                }
+            }
         }
     }
 }
