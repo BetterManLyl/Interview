@@ -1,6 +1,11 @@
 package com.demo.interview.third_sdk.okhttp;
 
+import android.net.Uri;
+
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URLConnection;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -30,11 +35,36 @@ public class OkHttpTest {
                 .build();
         Call call = okHttpClient.newCall(request);
         try {
+            /**
+             * 同步请求
+             */
             Response response = call.execute();
             response.body().toString();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        /**
+         * 异步请求
+         */
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+            }
+        });
+
+        try {
+            Class c = Class.forName("");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     /**
