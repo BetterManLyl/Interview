@@ -58,6 +58,8 @@
         <activity android:name=".network.socket.TCPClientActivity" />
 
         <service android:name=".network.socket.TcpServerService" />
+
+        <activity android:name=".mvc_mvp_mvvm.mvvm.MVVMActivity_test" />
     </application>
 
 </manifest>
