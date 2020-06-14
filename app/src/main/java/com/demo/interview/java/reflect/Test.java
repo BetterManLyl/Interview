@@ -41,16 +41,13 @@ public class Test {
             //获取class对象的所有public方法 包括父类的方法
             Method[] methods = reflectClass.getMethods();
 
-            reflectClass.getMethod("test_1",null);
 
             reflectClass.newInstance();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        }  catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
             e.printStackTrace();

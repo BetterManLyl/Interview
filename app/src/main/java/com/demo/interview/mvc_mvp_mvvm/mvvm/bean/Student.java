@@ -1,4 +1,7 @@
-package com.demo.interview.mvc_mvp_mvvm.mvvm;
+package com.demo.interview.mvc_mvp_mvvm.mvvm.bean;
+
+import androidx.databinding.BaseObservable;
+import androidx.databinding.Bindable;
 
 /**
  * 文 件 名：Student
@@ -10,7 +13,9 @@ package com.demo.interview.mvc_mvp_mvvm.mvvm;
  * 修改时间：
  * 修改备注：
  */
-public class Student {
+public class Student extends BaseObservable {
+
+    @Bindable
     private String name;
     private String id;
 
@@ -20,6 +25,7 @@ public class Student {
 
     public void setName(String name) {
         this.name = name;
+        notifyChange();
     }
 
     public String getId() {
@@ -28,5 +34,6 @@ public class Student {
 
     public void setId(String id) {
         this.id = id;
+        notifyChange();
     }
 }

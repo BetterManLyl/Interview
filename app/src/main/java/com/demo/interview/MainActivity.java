@@ -3,6 +3,7 @@ package com.demo.interview;
 import android.content.Intent;
 import android.view.View;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.demo.interview.animation.AnimationActivity;
 import com.demo.interview.base.BaseActivity;
 import com.demo.interview.data_store.DataStoreActivity;
@@ -10,6 +11,7 @@ import com.demo.interview.four_component.launch_activity.ActivityOne;
 import com.demo.interview.four_component.service.TestServiceAc;
 import com.demo.interview.fragment.FragmentActivity;
 import com.demo.interview.message.HandlerActivity;
+import com.demo.interview.mvc_mvp_mvvm.StructureActivity;
 import com.demo.interview.network.socket.TCPClientActivity;
 import com.demo.interview.performance_optimize.PerforOptActivity;
 import com.demo.interview.third_sdk.rxjava.RxJavaActivity;
@@ -35,6 +37,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_data_store).setOnClickListener(this);
         findViewById(R.id.btn_custom_view).setOnClickListener(this);
         findViewById(R.id.btn_socket).setOnClickListener(this);
+        findViewById(R.id.btn_structure).setOnClickListener(this);
     }
 
     @Override
@@ -75,8 +78,17 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn_socket:
                 startActivity(new Intent(MainActivity.this, TCPClientActivity.class));
                 break;
+            case R.id.btn_structure:
+                startActivity(new Intent(MainActivity.this, StructureActivity.class));
+                break;
+            case R.id.btn_test:
+                ToastUtils.showShort("点击了");
+                break;
+
             default:
                 break;
         }
     }
+
+
 }

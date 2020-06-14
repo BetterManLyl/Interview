@@ -75,4 +75,19 @@
         android:layout_height="wrap_content"
         android:text="socket"
         android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_structure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="架构"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test"
+        android:onClick="onClick"
+        android:textAllCaps="false" />
 </LinearLayout>

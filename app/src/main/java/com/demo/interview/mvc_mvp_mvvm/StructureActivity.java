@@ -1,9 +1,16 @@
 package com.demo.interview.mvc_mvp_mvvm;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
+import com.demo.interview.R;
+import com.demo.interview.databinding.ActivityStructreBinding;
+import com.demo.interview.mvc_mvp_mvvm.mvvm.MVVMActivity_test;
 
 /**
  * 文 件 名：StructureActivity
@@ -16,8 +23,20 @@ import androidx.appcompat.app.AppCompatActivity;
  * 修改备注：
  */
 public class StructureActivity extends AppCompatActivity {
+
+    private ActivityStructreBinding binding;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_structre);
+        binding.setClick(new OnClickHandler());
+    }
+
+
+    public class OnClickHandler {
+        public void startMVVM() {
+            startActivity(new Intent(StructureActivity.this, MVVMActivity_test.class));
+        }
     }
 }
