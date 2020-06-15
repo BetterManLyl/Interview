@@ -10,3 +10,14 @@ https://www.jianshu.com/p/f5a1c9318524
 
 2、MediaCodec和MediaMuxer编解码并进行音视频合并 demo
 https://github.com/zhongjihao/AVMediaCodecMP4
+
+封装格式和编码格式
+封装格式如：
+MP4
+avi
+mp3
+
+编码格式
+aac
+h264
+

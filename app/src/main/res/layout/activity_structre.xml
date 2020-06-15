@@ -30,7 +30,7 @@
             android:id="@+id/btn_mvvm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{()->click.startMVVM()}"
+            android:onClick="@{click.onClick}"
             android:text="mvvm" />
 
     </LinearLayout>

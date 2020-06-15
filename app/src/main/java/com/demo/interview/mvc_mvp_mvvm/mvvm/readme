@@ -3,3 +3,23 @@
 MVVM架构相关
 DataBinding的使用
 https://www.jianshu.com/p/bd9016418af2
+
+
+1、开启dataBinding
+ dataBinding {
+        enabled = true
+    }
+2、在布局中声明dataBinding
+比如：
+    <data>
+        <import type="com.demo.interview.mvc_mvp_mvvm.mvvm.Student" />
+        <import type="com.demo.interview.mvc_mvp_mvvm.mvvm.User" />
+        <variable
+            name="userInfo"
+            type="User" />
+        <variable
+            name="student"
+            type="Student" />
+    </data>
+3、ViewDataBinding 的实例名是根据布局文件名来生成，将之改为首字母大写的驼峰命名法来命名，
+并省略布局文件名包含的下划线。控件的获取方式类似，但首字母小写
