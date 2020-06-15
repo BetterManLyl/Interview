@@ -102,6 +102,7 @@ public class BDListAdapter extends RecyclerView.Adapter<BDListAdapter.MyViewHold
             mBinding = binding;
         }
 
+        //获取binding
         public T getmBinding() {
             return mBinding;
         }
