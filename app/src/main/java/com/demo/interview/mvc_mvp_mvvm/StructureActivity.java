@@ -35,7 +35,7 @@ public class StructureActivity extends AppCompatActivity {
 
 
     public class OnClickHandler {
-        public void startMVVM() {
+        public void onClick(View view) {
             startActivity(new Intent(StructureActivity.this, MVVMActivity_test.class));
         }
     }

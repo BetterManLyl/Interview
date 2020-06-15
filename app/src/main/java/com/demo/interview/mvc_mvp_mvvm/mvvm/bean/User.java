@@ -17,6 +17,7 @@ import com.demo.interview.BR;
  */
 public class User extends BaseObservable {
     //如果是 public 修饰符，则可以直接在成员变量上方加上 @Bindable 注解
+    @Bindable
     public String name;
 
     //如果是 private 修饰符，则在成员变量的 get 方法上添加 @Bindable 注解
@@ -37,7 +38,6 @@ public class User extends BaseObservable {
     public void setPassWord(String passWord) {
         this.passWord = passWord;
     }
-
 
 
     @Bindable
