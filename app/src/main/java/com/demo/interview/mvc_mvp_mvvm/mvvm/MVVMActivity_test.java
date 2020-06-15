@@ -8,6 +8,7 @@ import com.blankj.utilcode.util.ToastUtils;
 import com.demo.interview.R;
 import com.demo.interview.databinding.ActivityMvvmBinding;
 import com.demo.interview.mvc_mvp_mvvm.mvvm.bean.User;
+import com.demo.interview.mvc_mvp_mvvm.mvvm.test_mvvm.MVVMActivity;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -53,6 +54,9 @@ public class MVVMActivity_test extends AppCompatActivity {
                 break;
             case R.id.btn_list:
                 startActivity(new Intent(this,ListActivityBD.class));
+                break;
+            case R.id.btn_skip:
+                startActivity(new Intent(this, MVVMActivity.class));
                 break;
             default:
                 break;
