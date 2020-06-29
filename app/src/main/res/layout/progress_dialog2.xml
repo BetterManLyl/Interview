@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.demo.interview.animation.FpShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_item"
+    android:layout_width="148dp"
+    android:layout_height="90dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    app:fp_round_corner="fp_corner_all"
+    app:fp_shadowColor="#24000000"
+    app:fp_shadowRadius="4dp"
+    app:fp_shadowRoundRadius="10dp"
+    app:fp_shadowShape="fp_round_rectangle"
+    app:fp_shadowSide="fp_all"
+    android:orientation="vertical">
+
+
+<!--    <com.demo.interview.animation.FpShadowLayout-->
+<!--        android:layout_width="148dp"-->
+<!--        android:layout_height="90dp"-->
+<!--        android:background="#ffffff"-->
+<!--        app:fp_round_corner="fp_corner_all"-->
+<!--        app:fp_shadowColor="#24000000"-->
+<!--        app:fp_shadowRadius="4dp"-->
+<!--        app:fp_shadowRoundRadius="10dp"-->
+<!--        app:fp_shadowShape="fp_round_rectangle"-->
+<!--        app:fp_shadowSide="fp_all">-->
+
+        <LinearLayout
+            android:id="@+id/layout_type2"
+            android:layout_width="148dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_loading"
+                android:layout_width="100dp"
+                android:layout_height="38dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="second_part_refresh.json"
+                app:lottie_loop="true" />
+
+            <TextView
+                android:id="@+id/tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#4E5B75"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+<!--    </com.demo.interview.animation.FpShadowLayout>-->
+
+
+</com.demo.interview.animation.FpShadowLayout>

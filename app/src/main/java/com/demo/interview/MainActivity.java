@@ -5,6 +5,7 @@ import android.view.View;
 
 import com.blankj.utilcode.util.ToastUtils;
 import com.demo.interview.animation.AnimationActivity;
+import com.demo.interview.animation.LottieAnimActivity;
 import com.demo.interview.base.BaseActivity;
 import com.demo.interview.data_store.DataStoreActivity;
 import com.demo.interview.four_component.launch_activity.ActivityOne;
@@ -61,7 +62,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(new Intent(MainActivity.this, TestServiceAc.class));
                 break;
             case R.id.btn_animation:
-                startActivity(new Intent(MainActivity.this, AnimationActivity.class));
+                startActivity(new Intent(MainActivity.this, LottieAnimActivity.class));
                 break;
             case R.id.btn_rxjava:
                 startActivity(new Intent(MainActivity.this, RxJavaActivity.class));
@@ -85,6 +86,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 ToastUtils.showShort("点击了");
                 break;
                 //测试
+            
             default:
                 break;
         }

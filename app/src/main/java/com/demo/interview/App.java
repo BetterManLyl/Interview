@@ -16,6 +16,7 @@ import org.litepal.LitePalApplication;
  * 修改备注：
  */
 public class App extends LitePalApplication {
+    
     @Override
     public void onCreate() {
         super.onCreate();
