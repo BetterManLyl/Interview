@@ -24,5 +24,6 @@ public class App extends LitePalApplication {
         
         //测试分支合并
         //测试分支冲突 master
+        //测试分支冲突
     }
 }
