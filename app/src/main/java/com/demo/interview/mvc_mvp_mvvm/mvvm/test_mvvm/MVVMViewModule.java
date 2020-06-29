@@ -32,6 +32,8 @@ public class MVVMViewModule extends BaseObservable {
 
     public void setResult(String result) {
         this.result = result;
+        
+        
         notifyPropertyChanged(com.demo.interview.BR.result);
     }
 
