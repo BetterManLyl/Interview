@@ -61,6 +61,8 @@ dependencies {
     api 'org.litepal.android:java:3.0.0'
     compile "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    api 'com.airbnb.android:lottie:2.7.0'
 }
 repositories {
     mavenCentral()

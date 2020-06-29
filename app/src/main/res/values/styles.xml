@@ -7,5 +7,50 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="progress_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:backgroundDimAmount">0.0</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <declare-styleable name="Fp_ShadowLayout">
+        <attr name="fp_shadowColor" format="color"/>
+        <attr name="fp_shadowRadius" format="dimension"/>
+        <attr name="fp_shadowRoundRadius" format="dimension"/>
+        <attr name="fp_shadowShape">
+            <flag name="fp_rectangle" value="0x0001"/>
+            <flag name="fp_round_rectangle" value="0x0100"/>
+        </attr>
+        <attr name="fp_shadowSide">
+            <flag name="fp_all" value="0x1111"/>
+            <flag name="fp_left" value="0x0001"/>
+            <flag name="fp_top" value="0x0010"/>
+            <flag name="fp_right" value="0x0100"/>
+            <flag name="fp_bottom" value="0x1000"/>
+        </attr>
+        <attr name="fp_round_corner">
+            <flag name="fp_corner_all" value="0x1111"/>
+            <flag name="fp_corner_leftTop" value="0x0001"/>
+            <flag name="fp_corner_leftBottom" value="0x0010"/>
+            <flag name="fp_corner_rightTop" value="0x0100"/>
+            <flag name="fp_corner_rightBottom" value="0x1000"/>
+        </attr>
+    </declare-styleable>
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
 </resources>

@@ -62,6 +62,7 @@
         <activity android:name=".mvc_mvp_mvvm.mvvm.MVVMActivity_test" />
         <activity android:name=".mvc_mvp_mvvm.StructureActivity" />
         <activity android:name=".mvc_mvp_mvvm.mvvm.ListActivityBD"/>
+        <activity android:name=".animation.LottieAnimActivity"/>
     </application>
 
 </manifest>
