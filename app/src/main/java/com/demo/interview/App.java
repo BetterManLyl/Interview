@@ -21,5 +21,7 @@ public class App extends LitePalApplication {
     public void onCreate() {
         super.onCreate();
         LitePal.initialize(this);
+        
+        //测试分支合并
     }
 }
