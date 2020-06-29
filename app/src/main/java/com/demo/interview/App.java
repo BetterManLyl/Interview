@@ -23,5 +23,6 @@ public class App extends LitePalApplication {
         LitePal.initialize(this);
         
         //测试分支合并
+        //测试分支冲突
     }
 }
