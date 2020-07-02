@@ -19,6 +19,8 @@ import com.demo.interview.R;
  * 修 改 人：
  * 修改时间：
  * 修改备注：
+ * LottieAnim加载json动画
+ * 参考博客
  */
 public class LottieAnimActivity extends AppCompatActivity {
 
@@ -67,5 +69,14 @@ public class LottieAnimActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         lottieAnimationView.cancelAnimation();
+    }
+
+    /**
+     * 加载json 的url地址
+     * @param url
+     */
+    private void loadUrl(String url){
+        lottieAnimationView.setAnimationFromUrl(url);
+        lottieAnimationView.playAnimation();
     }
 }
