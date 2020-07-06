@@ -19,6 +19,7 @@ import androidx.annotation.NonNull;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.demo.interview.App;
+import com.demo.interview.MainActivity;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
@@ -26,7 +27,7 @@ import java.util.List;
 import static android.bluetooth.BluetoothDevice.TRANSPORT_LE;
 
 /**
- * 文 件 名：BlueCore
+ * 文 件 名：BleCore
  * 创 建 人：李跃龙
  * 创建日期：2020/7/1 15:28
  * 邮    箱：ylli10@iflytek.com
@@ -266,7 +267,9 @@ public class BleCore {
             super.handleMessage(msg);
             Activity activity = (Activity) reference.get();
             if (null != activity) {
+                if (activity instanceof MainActivity) {
 
+                }
             }
             switch (msg.what) {
                 case MESSAGE_TIME:

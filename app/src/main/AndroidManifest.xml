@@ -5,8 +5,8 @@
 
     <!--添加蓝牙权限-->
     <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -65,8 +65,19 @@
 
         <activity android:name=".mvc_mvp_mvvm.mvvm.MVVMActivity_test" />
         <activity android:name=".mvc_mvp_mvvm.StructureActivity" />
-        <activity android:name=".mvc_mvp_mvvm.mvvm.ListActivityBD"/>
-        <activity android:name=".animation.LottieAnimActivity"/>
+        <activity android:name=".mvc_mvp_mvvm.mvvm.ListActivityBD" />
+        <activity android:name=".animation.LottieAnimActivity" />
+        <activity android:name=".screen_adapter.ScreenHaveAdapterActivity"/>
+        <activity android:name=".screen_adapter.ScreenNoAdapterActivity"/>
+        <activity android:name=".screen_adapter.ScreenAdapterActivity"/>
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
     </application>
+  
 
 </manifest>

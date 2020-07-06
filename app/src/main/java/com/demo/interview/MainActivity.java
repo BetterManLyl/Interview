@@ -15,6 +15,7 @@ import com.demo.interview.message.HandlerActivity;
 import com.demo.interview.mvc_mvp_mvvm.StructureActivity;
 import com.demo.interview.network.socket.TCPClientActivity;
 import com.demo.interview.performance_optimize.PerforOptActivity;
+import com.demo.interview.screen_adapter.ScreenAdapterActivity;
 import com.demo.interview.third_sdk.rxjava.RxJavaActivity;
 import com.demo.interview.widget.custom.MyCustomViewActivity;
 
@@ -39,6 +40,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_custom_view).setOnClickListener(this);
         findViewById(R.id.btn_socket).setOnClickListener(this);
         findViewById(R.id.btn_structure).setOnClickListener(this);
+        findViewById(R.id.btn_screen).setOnClickListener(this);
     }
 
     @Override
@@ -86,7 +88,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 ToastUtils.showShort("点击了");
                 break;
                 //测试
-            
+            case R.id.btn_screen:
+                startActivity(new Intent(MainActivity.this, ScreenAdapterActivity.class));
+                break;
             default:
                 break;
         }
