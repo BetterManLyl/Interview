@@ -3,6 +3,7 @@ package com.demo.interview;
 import android.content.Intent;
 import android.view.View;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.demo.interview.animation.AnimationActivity;
 import com.demo.interview.animation.LottieAnimActivity;
@@ -17,7 +18,14 @@ import com.demo.interview.network.socket.TCPClientActivity;
 import com.demo.interview.performance_optimize.PerforOptActivity;
 import com.demo.interview.screen_adapter.ScreenAdapterActivity;
 import com.demo.interview.third_sdk.rxjava.RxJavaActivity;
+import com.demo.interview.widget.android.CoordinatorLayoutActivity;
 import com.demo.interview.widget.custom.MyCustomViewActivity;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -87,9 +95,26 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn_test:
                 ToastUtils.showShort("点击了");
                 break;
-                //测试
+            //测试
             case R.id.btn_screen:
+                Map<String, String> map = new HashMap<>();
+                map.put("1", "test1");
+                map.put("2", "test2");
+                map.put("3", "test3");
+                JSONObject jsonObject1 = new JSONObject(map);
+                JSONObject jsonObject = new JSONObject();
+                try {
+                    jsonObject.put("roles", jsonObject1);
+                    jsonObject.put("orderId", "1234455");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                LogUtils.d("json:" + jsonObject.toString());
                 startActivity(new Intent(MainActivity.this, ScreenAdapterActivity.class));
+                break;
+            case R.id.btn_layout:
+                startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
+
                 break;
             default:
                 break;
