@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <!--订单状态-->
+    <RelativeLayout
+        android:id="@+id/rl_order_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_bottom_player"
+        android:layout_marginBottom="14dp"
+        android:background="#F0F6FF"
+        android:padding="16dp">
+
+
+        <ImageView
+            android:id="@+id/img_order_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_edit" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_transfering"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            app:lottie_autoPlay="false"
+            app:lottie_fileName="gujia.json"
+            app:lottie_loop="false" />
+
+        <TextView
+            android:id="@+id/tv_order_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/img_order_state"
+            android:layout_alignBottom="@+id/img_order_state"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/img_order_state"
+            android:gravity="center_vertical"
+            android:text="1223"
+            android:textColor="#404040"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_transfer_word"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:background="@mipmap/icon_edit"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="转文字"
+            android:textColor="#fff"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_order_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_order_title"
+            android:layout_alignLeft="@+id/tv_order_title"
+            android:layout_marginTop="4dp"
+            android:text="预计5月份完成"
+            android:textColor="#737373"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_go_pay"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/tv_order_desc"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@mipmap/icon_edit"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="去支付"
+            android:textColor="#fff"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_check_order"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/tv_order_desc"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="13dp"
+            android:layout_toLeftOf="@+id/tv_go_pay"
+            android:background="@mipmap/icon_edit"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="查看订单"
+            android:textColor="#4285f6"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+</layout>

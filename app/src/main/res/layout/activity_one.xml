@@ -18,5 +18,46 @@
         android:layout_height="wrap_content"
         android:text="屏幕旋转" />
 
+    <LinearLayout
+        android:id="@+id/ll_expand_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="2020年5月6号 12:09"
+            android:textColor="#333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/ed_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:fitsSystemWindows="true"
+            android:text="2020年5月6号 12:09"
+            android:textColor="#333"
+            android:textSize="18sp"
+            android:textStyle="bold"
+           />
+
+        <ImageView
+            android:id="@+id/icon_edit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/icon_edit" />
+    </LinearLayout>
 
 </LinearLayout>

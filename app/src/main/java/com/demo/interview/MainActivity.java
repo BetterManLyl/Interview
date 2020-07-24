@@ -19,6 +19,7 @@ import com.demo.interview.performance_optimize.PerforOptActivity;
 import com.demo.interview.screen_adapter.ScreenAdapterActivity;
 import com.demo.interview.third_sdk.rxjava.RxJavaActivity;
 import com.demo.interview.widget.android.CoordinatorLayoutActivity;
+import com.demo.interview.widget.android.CoordinatorLayoutActivitytest;
 import com.demo.interview.widget.custom.MyCustomViewActivity;
 
 import org.json.JSONException;
@@ -113,7 +114,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(new Intent(MainActivity.this, ScreenAdapterActivity.class));
                 break;
             case R.id.btn_layout:
-                startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
+//                startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
+                startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivitytest.class));
 
                 break;
             default:

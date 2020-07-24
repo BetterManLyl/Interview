@@ -114,6 +114,20 @@
                 android:onClick="onClick"
                 android:text="布局"
                 android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/play_progresss"
+                style="@style/Widget.SeekBar.Normal2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:max="100"
+                android:padding="0dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:progress="0"
+                android:splitTrack="false" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -21,6 +21,16 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:backgroundDimEnabled">true</item>
     </style>
+    <style name="Widget.SeekBar.Normal2" parent="@android:style/Widget.SeekBar">
+        <item name="android:maxHeight">2dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/seekbar_horizontal1</item>
+        <item name="android:minHeight">2dip</item>
+        <item name="android:thumb">@drawable/seek_bar_thumb</item>
+    </style>
     <declare-styleable name="Fp_ShadowLayout">
         <attr name="fp_shadowColor" format="color"/>
         <attr name="fp_shadowRadius" format="dimension"/>

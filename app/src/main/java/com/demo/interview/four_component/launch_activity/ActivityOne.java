@@ -3,10 +3,16 @@ package com.demo.interview.four_component.launch_activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ScreenUtils;
 import com.demo.interview.R;
+import com.demo.interview.mvc_mvp_mvvm.mvp.contract.LoginContract;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,7 +30,11 @@ import androidx.appcompat.app.AppCompatActivity;
  * 如果将ActivityOne的启动方式修改为singletask，那么从ActivityThree跳转到ActivityOne
  * 之后，ActivityTwo将会自动finish
  */
-public class ActivityOne extends AppCompatActivity {
+public class ActivityOne extends AppCompatActivity implements View.OnClickListener {
+    private LinearLayout ll_title;
+    private EditText editText;
+    private TextView tv_title;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +49,22 @@ public class ActivityOne extends AppCompatActivity {
 //        findViewById(R.id.skip).setOnClickListener(v -> startActivity(new Intent(ActivityOne.this, ActivityOne.class)));
 
         findViewById(R.id.skip).setOnClickListener(v -> startActivity(new Intent(ActivityOne.this, ActivityTwo.class)));
-
-
+        editText = findViewById(R.id.ed_title);
+        ll_title = findViewById(R.id.ll_expand_title);
+        ll_title.setOnClickListener(this);
+        editText = findViewById(R.id.ed_title);
+        tv_title = findViewById(R.id.tv_title);
+        tv_title.setOnClickListener(this);
+        editText.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction()==MotionEvent.ACTION_UP){
+                    editText.setSelectAllOnFocus(true);
+                    editText.selectAll();
+                }
+                return false;
+            }
+        });
         /**
          * 如果给当前activity设置了android:configChanges="orientation|screenSize"
          * 那么在屏幕旋转的时候不会销毁该activity
@@ -118,5 +142,21 @@ public class ActivityOne extends AppCompatActivity {
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         LogUtils.d("onNewIntent");
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+//            case R.id.ll_expand_title:
+//            case R.id.tv_title:
+//                tv_title.setVisibility(View.GONE);
+//                editText.setVisibility(View.VISIBLE);
+//                editText.requestFocus();
+//                editText.selectAll();
+//                break;
+            default:
+                break;
+        }
     }
 }

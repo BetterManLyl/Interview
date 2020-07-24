@@ -62,7 +62,7 @@ dependencies {
     compile "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     api 'com.google.android.material:material:1.0.0'
-    api 'com.airbnb.android:lottie:2.7.0'
+    api 'com.airbnb.android:lottie:3.4.0'
     api 'com.huxq17.xrefreshview:xrefreshview:3.6.9'
 }
 repositories {
