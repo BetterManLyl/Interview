@@ -30,5 +30,19 @@
             android:textAllCaps="false" />
     </com.demo.interview.widget.custom.MyViewGroup>
 
-
+    <com.demo.interview.widget.custom.DragZoomInSeekBar
+        style="@style/Widget.SeekBar.Normal2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:max="100"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:progress="0"
+        android:splitTrack="false"
+        android:thumbOffset="0dp" />
 </LinearLayout>

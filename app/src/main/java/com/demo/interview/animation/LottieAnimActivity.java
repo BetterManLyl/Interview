@@ -44,25 +44,25 @@ public class LottieAnimActivity extends AppCompatActivity {
 //        }, 3000);
 
 
-        findViewById(R.id.btn_start).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                progressDialog.setTips("12333333");
-                progressDialog.show();
-            }
-        });
-        findViewById(R.id.btn_start2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                progressDialog.show();
-            }
-        });
-        findViewById(R.id.btn_stop).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                progressDialog.dismiss();
-            }
-        });
+//        findViewById(R.id.btn_start).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                progressDialog.setTips("12333333");
+//                progressDialog.show();
+//            }
+//        });
+//        findViewById(R.id.btn_start2).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                progressDialog.show();
+//            }
+//        });
+//        findViewById(R.id.btn_stop).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                progressDialog.dismiss();
+//            }
+//        });
     }
 
     @Override
