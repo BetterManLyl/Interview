@@ -24,6 +24,7 @@ public class AnimationActivity extends BaseActivity {
 
     private Button btn_tween_animation;
 
+
     @Override
     public int getLayoutId() {
         return R.layout.activity_tween_animation;

@@ -19,6 +19,8 @@ import com.demo.interview.R;
  * 修 改 人：
  * 修改时间：
  * 修改备注：
+ * LottieAnim加载json动画
+ * 参考博客
  */
 public class LottieAnimActivity extends AppCompatActivity {
 
@@ -42,30 +44,39 @@ public class LottieAnimActivity extends AppCompatActivity {
 //        }, 3000);
 
 
-        findViewById(R.id.btn_start).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                progressDialog.setTips("12333333");
-                progressDialog.show();
-            }
-        });
-        findViewById(R.id.btn_start2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                progressDialog.show();
-            }
-        });
-        findViewById(R.id.btn_stop).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                progressDialog.dismiss();
-            }
-        });
+//        findViewById(R.id.btn_start).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                progressDialog.setTips("12333333");
+//                progressDialog.show();
+//            }
+//        });
+//        findViewById(R.id.btn_start2).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                progressDialog.show();
+//            }
+//        });
+//        findViewById(R.id.btn_stop).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                progressDialog.dismiss();
+//            }
+//        });
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         lottieAnimationView.cancelAnimation();
+    }
+
+    /**
+     * 加载json 的url地址
+     * @param url
+     */
+    private void loadUrl(String url){
+        lottieAnimationView.setAnimationFromUrl(url);
+        lottieAnimationView.playAnimation();
     }
 }

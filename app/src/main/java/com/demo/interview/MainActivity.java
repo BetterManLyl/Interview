@@ -1,8 +1,23 @@
 package com.demo.interview;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.SeekBar;
 
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+
+import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.demo.interview.animation.AnimationActivity;
 import com.demo.interview.animation.LottieAnimActivity;
@@ -15,8 +30,18 @@ import com.demo.interview.message.HandlerActivity;
 import com.demo.interview.mvc_mvp_mvvm.StructureActivity;
 import com.demo.interview.network.socket.TCPClientActivity;
 import com.demo.interview.performance_optimize.PerforOptActivity;
+import com.demo.interview.screen_adapter.ScreenAdapterActivity;
 import com.demo.interview.third_sdk.rxjava.RxJavaActivity;
+import com.demo.interview.widget.android.CoordinatorLayoutActivity;
+import com.demo.interview.widget.android.CoordinatorLayoutActivitytest;
 import com.demo.interview.widget.custom.MyCustomViewActivity;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -39,6 +64,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_custom_view).setOnClickListener(this);
         findViewById(R.id.btn_socket).setOnClickListener(this);
         findViewById(R.id.btn_structure).setOnClickListener(this);
+        findViewById(R.id.btn_screen).setOnClickListener(this);
     }
 
     @Override
@@ -85,8 +111,28 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn_test:
                 ToastUtils.showShort("点击了");
                 break;
-                //测试
-            
+            //测试
+            case R.id.btn_screen:
+                Map<String, String> map = new HashMap<>();
+                map.put("1", "test1");
+                map.put("2", "test2");
+                map.put("3", "test3");
+                JSONObject jsonObject1 = new JSONObject(map);
+                JSONObject jsonObject = new JSONObject();
+                try {
+                    jsonObject.put("roles", jsonObject1);
+                    jsonObject.put("orderId", "1234455");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                LogUtils.d("json:" + jsonObject.toString());
+                startActivity(new Intent(MainActivity.this, ScreenAdapterActivity.class));
+                break;
+            case R.id.btn_layout:
+//                startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
+                startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivitytest.class));
+
+                break;
             default:
                 break;
         }

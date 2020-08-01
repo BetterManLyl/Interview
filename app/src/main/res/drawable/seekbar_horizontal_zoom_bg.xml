@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@android:id/background"
+        android:height="5dp"
+        android:gravity="center_vertical">
+        <shape>
+            <solid android:color="#338c8c8c" />
+            <stroke
+                android:width="1px"
+                android:color="#338c8c8c" />
+           
+        </shape>
+    </item>
+    <item
+        android:id="@android:id/secondaryProgress"
+        android:height="5dp"
+        android:gravity="center_vertical">
+        <clip>
+            <shape>
+                <solid android:color="#4285F6" />
+                <stroke
+                    android:width="1px"
+                    android:color="#4285F6" />
+               
+            </shape>
+        </clip>
+    </item>
+    <item
+        android:id="@android:id/progress"
+        android:height="5dp"
+        android:gravity="center_vertical">
+        <clip>
+            <shape>
+
+                <solid android:color="#4285F6" />
+                <stroke
+                    android:width="1px"
+                    android:color="#4285F6" />
+               
+            </shape>
+        </clip>
+    </item>
+    <!--<item android:id="@android:id/progress" android:drawable="@drawabl
+    e/seek_bar_progress">
+    </item>-->
+
+</layer-list>

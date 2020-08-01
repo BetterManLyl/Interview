@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
 
-    <RelativeLayout
+    <!--<RelativeLayout
         android:id="@+id/layout_type2"
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -38,5 +38,12 @@
         android:id="@+id/btn_stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="停止" />
+        android:text="停止" />-->
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="gujia.json"
+        app:lottie_loop="true" />
 </LinearLayout>
