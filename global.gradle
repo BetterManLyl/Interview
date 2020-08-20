@@ -1,0 +1,15 @@
+// 用来存放应用中的所有配置变量，统一管理，而不再是每个moudle里都自己写一份，修改起来更加的方便
+
+ext {
+    android = [
+            apkName          : "${new Date().format('yyyyMMddHHmm')}",
+            applicationId: 'com.demo.interview',
+            compileSdkVersion: 28,
+            buildToolsVersion: '26.0.2',
+            minSdkVersion    : 19,
+            targetSdkVersion : 28,
+            versionCode      : 26,
+            versionName      : '1.2.7',
+            multiDexEnabled  : true]
+
+}
