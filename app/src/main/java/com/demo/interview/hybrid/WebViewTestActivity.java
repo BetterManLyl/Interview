@@ -11,6 +11,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.blankj.utilcode.util.LogUtils;
+import com.demo.interview.R;
 import com.demo.interview.base.BaseActivity;
 
 /**
@@ -26,15 +27,18 @@ import com.demo.interview.base.BaseActivity;
 public class WebViewTestActivity extends BaseActivity {
 
     private WebView webView;
+//    private String loadUrl="http://172.16.8.150:8080/";
+
+    private String loadUrl="http://192.168.31.45:8888/";
 
     @Override
     public int getLayoutId() {
-        return 0;
+        return R.layout.activity_webview_test;
     }
 
     @Override
     public void initView() {
-        webView = new WebView(this);
+        webView = findViewById(R.id.webview);
         WebSettings settings = webView.getSettings();
         //设置原生与js可以互相调用
         settings.setJavaScriptEnabled(true);
@@ -62,6 +66,11 @@ public class WebViewTestActivity extends BaseActivity {
                 return super.onJsConfirm(view, url, message, result);
             }
         });
+        loadUrl(loadUrl);
+        // 通过addJavascriptInterface()将Java对象映射到JS对象
+        //参数1：Javascript对象名
+        //参数2：Java对象名
+        webView.addJavascriptInterface(new MyUtils(this), "android");
     }
 
     @Override

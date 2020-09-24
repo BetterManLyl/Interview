@@ -26,6 +26,7 @@ import com.demo.interview.data_store.DataStoreActivity;
 import com.demo.interview.four_component.launch_activity.ActivityOne;
 import com.demo.interview.four_component.service.TestServiceAc;
 import com.demo.interview.fragment.FragmentActivity;
+import com.demo.interview.hybrid.WebViewTestActivity;
 import com.demo.interview.message.HandlerActivity;
 import com.demo.interview.mvc_mvp_mvvm.StructureActivity;
 import com.demo.interview.network.socket.TCPClientActivity;
@@ -65,6 +66,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.btn_socket).setOnClickListener(this);
         findViewById(R.id.btn_structure).setOnClickListener(this);
         findViewById(R.id.btn_screen).setOnClickListener(this);
+        findViewById(R.id.btn_webview).setOnClickListener(this);
+
     }
 
     @Override
@@ -131,6 +134,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn_layout:
 //                startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
                 startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivitytest.class));
+
+                break;
+            case R.id.btn_webview:
+//                startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
+                startActivity(new Intent(MainActivity.this, WebViewTestActivity.class));
 
                 break;
             default:
